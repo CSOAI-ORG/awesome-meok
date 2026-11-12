@@ -1,76 +1,72 @@
-# Awesome Meok
+# Awesome MEOK × Council of AI (GSPC)
 
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![MEOK](https://img.shields.io/badge/MEOK-meok.ai-0ea5e9)](https://meok.ai)
 [![GSPC](https://img.shields.io/badge/GSPC-live%20GET%20%2Fapi%2Fgspc-0ea5e9)](https://councilof.ai/api/gspc)
 [![Measurement](https://img.shields.io/badge/Measurement-not%20certification-64748b)](https://councilof.ai/api/gspc)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/awesome_meok/)
 
-> 🚀 The complete MEOK AI Labs MCP ecosystem — 200+ servers for AI compliance, governance, and autom...
-
-🚀 The complete MEOK AI Labs MCP ecosystem — 200+ servers for AI compliance, governance, and automation.
+> Curated directory of verified live endpoints, published SDKs/MCP packages, and open repositories across **Council of AI** (`councilof.ai`), **MEOK** (`meok.ai`), and **GSPC** (`GET https://councilof.ai/api/gspc`).
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-# Install via pip
-pip install awesome_meok
+# Configure Council of AI GSPC MCP (csoai-gspc-mcp + https://councilof.ai/mcp) in your AI client
+npx meok-setup --pack gspc
 
-# Or install via Smithery
-npx -y @smithery/cli@latest install awesome-meok --client claude
+# Quote the live GSPC measurement board verbatim
+npx meok-setup --check-gspc
+
+# Run the standalone stdio GSPC board & Ed25519 verifier
+npx -y csoai-gspc-mcp
+
+# Install Layer-0 SDKs (TypeScript / Python)
+npm i @csoai/layer0
+pip install csoai-gspc
 ```
-
-## ✨ Features
-
-- MCP protocol compliant
-- Easy installation
-- Well-documented API
-- Production-ready
-- Active maintenance
-
-## 📖 Documentation
-
-- [Full Documentation](https://docs.meok.ai/awesome-meok)
-- [API Reference](https://api.meok.ai)
-- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
-
-## Honesty register (2026-09-02)
-
-**Live authority is `GET https://councilof.ai/api/gspc`** — cite `totals.public_count` and `totals.lid` from that payload. Do not type axis counts into this README.
-
-- **Measurement, not certification.** CSOAI Ltd measures and signs; it does not certify, accredit, or act as a notified body.
-- **MEOK.ai is a shelf / frontend**, not a second Council. Printers and agents must read the live GSPC endpoint — never invent scores, never wrangler a stamp.
-- Prefer honest **UNCHECKABLE** over a fake stamp. This package does **not** certify EU AI Act compliance.
-
-
-## 🏢 Enterprise
-
-Need custom development, SLA guarantees, or white-label deployment?
-
-- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
-- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
-
-[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
-
-## 🤝 Part of the MEOK Ecosystem
-
-This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
-
-| Domain | Purpose |
-|--------|---------|
-| [councilof.ai](https://councilof.ai) | Independent measurement board — live `GET /api/gspc` |
-| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
-| [meok.ai](https://meok.ai) | Shelf / frontend (not a second Council) |
-| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
-
-## 📜 License
-
-MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
 ---
 
-<p align="center">
-  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
-</p>
+## Verified Live Surfaces
+
+| Surface | URL | Purpose |
+| --- | --- | --- |
+| **Council of AI** | [`https://councilof.ai`](https://councilof.ai) | Independent AI safety & governance measurement board |
+| **GSPC Live JSON Authority** | [`https://councilof.ai/api/gspc`](https://councilof.ai/api/gspc) | Canonical live GSPC board (`totals.public_count` & `totals.lid`, free forever) |
+| **GSPC Board UI** | [`https://councilof.ai/board`](https://councilof.ai/board) | Interactive axis & run explorer |
+| **GSPC Ed25519 Verifier** | [`https://councilof.ai/gspc-verify`](https://councilof.ai/gspc-verify) | Cryptographic receipt & OpenTimestamps verification (free forever) |
+| **GPAI Evidence Map** | [`https://councilof.ai/gpai`](https://councilof.ai/gpai) | EU AI Act GPAI obligation crosswalk (`WIRED` / `PARTIAL` / `UNMEASURED`) |
+| **Corrections Ledger** | [`https://councilof.ai/api/corrections`](https://councilof.ai/api/corrections) | Public corrections ledger (free forever) |
+| **Single Remote MCP Gateway** | `https://councilof.ai/mcp` | Sole remote Streamable HTTP MCP gateway across Council of AI & MEOK |
+| **MEOK Workspace** | [`https://meok.ai`](https://meok.ai) | Human-in-command workspace & shelf (not a second Council) |
+| **H.I.M. Charter** | [`https://meok.ai/him/`](https://meok.ai/him/) | Human In Mastery (`MEOK-HIM-001`) human-gated oversight surface |
+| **MEOK Hybrid Lab** | [`huggingface.co/spaces/csoai/meok-process-world-v0`](https://huggingface.co/spaces/csoai/meok-process-world-v0) | Public Gradio process-state world lab |
+| **GSPC Living Dataset** | [`huggingface.co/datasets/csoai/gspc-board-living`](https://huggingface.co/datasets/csoai/gspc-board-living) | Public mirror of GSPC board snapshots |
+
+---
+
+## Core Open Repositories (`CSOAI-ORG`)
+
+- [`CSOAI-ORG/councilof-ai`](https://github.com/CSOAI-ORG/councilof-ai) — `councilof.ai` web application, `/api/gspc`, `/mcp` gateway, `csoai-gspc-mcp`, and `@csoai/layer0`.
+- [`CSOAI-ORG/gspc-board`](https://github.com/CSOAI-ORG/gspc-board) — Scheduled GSPC measurement runner and Hugging Face mirror pipeline.
+- [`CSOAI-ORG/gspc-pulse`](https://github.com/CSOAI-ORG/gspc-pulse) — Hourly domain & endpoint pulse watcher (`councilof.ai`, `csoai.org`, `meok.ai`).
+- [`CSOAI-ORG/meok-ai-site`](https://github.com/CSOAI-ORG/meok-ai-site) — Production Cloudflare Pages source for `https://meok.ai` and `/him/`.
+- [`CSOAI-ORG/meok-ai`](https://github.com/CSOAI-ORG/meok-ai) — MEOK application & Python runtime tree (including deterministic `gspc_board` reader).
+- [`CSOAI-ORG/meok-setup`](https://github.com/CSOAI-ORG/meok-setup) — Zero-dependency CLI installer (`npx meok-setup`) for GSPC & MEOK MCP packs.
+
+---
+
+## Honesty Register
+
+**Live authority is `GET https://councilof.ai/api/gspc`** — cite `totals.public_count` and `totals.lid` verbatim from that payload. Do not type static axis counts into documentation.
+
+- **Measurement, not certification.** CSOAI Ltd (UK Companies House `16939677`) measures and signs; it does not certify, accredit, or act as a notified body.
+- **MEOK.ai is a shelf / frontend**, not a second Council, and operates no separate remote MCP gateway.
+- Prefer honest **UNCHECKABLE** over an unverified claim or fake stamp.
+
+---
+
+## License
+
+MIT © [CSOAI Ltd](https://councilof.ai)
